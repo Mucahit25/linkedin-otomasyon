@@ -17,6 +17,10 @@ Pzt 09-10, Sal 08:30-09:30, Çar 12-13, Per 08:30-09:30, Cum 10-11 (İstanbul). 
 - Üretim konusu ne vaat ne inkar edilir. Kullanıcının çalıştığı firmanın adı asla geçmez
   (yasaklı ifadelerde ayrıca kapı var).
 - Onay modu açık: Buffer'da taslak. Kapatmak: `onay_modu: false`.
+- Metinler arka arkaya aynı kalıba düşmesin: açılış türü değişir, "küçük bir not" gibi kalıplar
+  yasak, sektör yalnız bilgi notunda ya da görselde kesinse yazılır (2026-11-23 ilk taslaklarda
+  hepsi aynı kalıptaydı, düzeltildi).
+- Herkese açık depoya yazılmaması gereken ek yasaklı kelimeler `GIZLI_YASAKLI` gizli değerinde.
 
 ## Teknik not
 - Kaynak Instagram_Otomasyon'dan uyarlandı (aynı akış). Depo: GitHub `Mucahit25/linkedin-otomasyon` (public,
