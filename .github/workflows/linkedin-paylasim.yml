@@ -1,0 +1,63 @@
+name: LinkedIn paylaşım
+
+on:
+  schedule:
+    - cron: "37 6 * * *"          # her gün İstanbul 09:37 (UTC 06:37)
+  push:
+    branches: [main]
+    paths: ["linkedin-otomasyon/renderlar/**"]   # yeni render hemen sıraya girsin
+  workflow_dispatch:
+    inputs:
+      deneme:
+        description: "Deneme: Buffer'a göndermez, kayda dokunmaz, önizleme maili atar"
+        type: boolean
+        default: false
+      en_fazla:
+        description: "Bu çalışmada en fazla kaç gönderi hazırlansın (0 = sınırsız)"
+        type: number
+        default: 0
+
+permissions:
+  contents: write                 # paylaşım kaydını depoya yazmak için
+
+concurrency:
+  group: linkedin-paylasim       # aynı anda iki çalışma olmasın
+  cancel-in-progress: false
+
+jobs:
+  paylas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0          # renderların eklenme sırası için tam geçmiş
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: linkedin-otomasyon/requirements.txt
+
+      - name: Gerekenleri kur
+        run: |
+          pip install -r linkedin-otomasyon/requirements.txt
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Git kimliği
+        run: |
+          git config user.name "linkedin-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Paylaşım turu
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_ADRES: ${{ secrets.GMAIL_ADRES }}
+          GMAIL_UYGULAMA_SIFRESI: ${{ secrets.GMAIL_UYGULAMA_SIFRESI }}
+          BILDIRIM_EPOSTA: ${{ secrets.BILDIRIM_EPOSTA }}
+          GIZLI_YASAKLI: ${{ secrets.GIZLI_YASAKLI }}
+          WHATSAPP_TELEFON: ${{ secrets.WHATSAPP_TELEFON }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+        run: python linkedin-otomasyon/src/main.py ${{ inputs.deneme && '--deneme' || '' }} --en-fazla "${{ inputs.en_fazla || 0 }}"

@@ -1,0 +1,86 @@
+# LinkedIn Otomatik Paylaşım Sistemi: tüm ayarlar burada.
+# Bu dosyadaki değerleri değiştirmek kod değiştirmeden sistemi ayarlar.
+# Gizli anahtarlar (API key, şifre) ASLA buraya yazılmaz.
+
+# Sistemi tamamen durdurmak için false yap. Hiçbir şey planlanmaz, kayıt korunur.
+aktif: true
+
+hesap:
+  linkedin_adi: ""         # Buffer'da birden fazla LinkedIn kanalı olursa profil adı (boşsa ilki)
+  marka_adi: "Concord Design"
+  hizmet: "fuar standı 3D tasarımı ve görselleştirme"
+  # Üretim kuralı (2026-11-22, web sitesi ve Instagram ile aynı): tasarım öne çıkar.
+  # "Üretim yapmıyoruz" asla yazılmaz, üretim de vaat edilmez.
+  stand_tipleri: [ahşap, "modüler (Maxima / Plus)"]
+
+paylasim:
+  # 2026-11-23 kullanıcı kararı: hafta içi her gün 1 paylaşım, 20-25 paylaşımlık stok.
+  haftalik_adet: 5
+  saat_dilimi: Europe/Istanbul
+  # B2B LinkedIn için iş saati başı ve öğle arası en iyi aralıklar (Türkiye).
+  zaman_dilimleri:
+    - {gun: pazartesi, bas: "09:00", bit: "10:00"}
+    - {gun: sali,      bas: "08:30", bit: "09:30"}
+    - {gun: carsamba,  bas: "12:00", bit: "13:00"}
+    - {gun: persembe,  bas: "08:30", bit: "09:30"}
+    - {gun: cuma,      bas: "10:00", bit: "11:00"}
+  planlama_ufku_gun: 7
+  min_sure_saat: 3
+  carousel_max: 9
+  siralama: en_eski_once
+  onay_modu: true          # true: Buffer'da taslak açılır, sen onaylarsın. false: doğrudan planlanır.
+
+klasorler:                 # linkedin-otomasyon/ klasörüne göre yollar
+  renderlar: renderlar
+  hazir: hazir
+  kayit: kayit/paylasimlar.json
+
+dosya:
+  desteklenen_uzantilar: [".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"]
+  uyari_mb: 25             # bunun üstündeki renderlar için uyarı gönderilir
+  azami_mb: 50             # bunun üstündeki dosyalar atlanır (GitHub sınırı)
+
+gorsel:
+  genislik: 1080
+  yukseklik: 1350
+  yontem: bulanik_cerceve
+  jpeg_kalite: 90
+  azami_cikti_mb: 8
+  bulaniklik_yaricapi: 40
+  arka_plan_karartma: 0.35   # 0 = hiç, 1 = tamamen siyah
+  logo:
+    dosya: logo/logo.png
+    konum: sag_alt           # sag_alt | sol_alt | sag_ust | sol_ust
+    genislik_orani: 0.16
+    kenar_boslugu_orani: 0.03
+    opaklik: 0.85
+
+aciklama:
+  platform: linkedin
+  motor: claude_abonelik     # claude_abonelik (Claude aboneliği) | api (ayrı ücretli API anahtarı)
+  model: claude-sonnet-5-5
+  dil: tr
+  ton: "profesyonel, sade, bir meslektaşa konuşur gibi"
+  min_karakter: 350
+  max_karakter: 900
+  gorsel_sayisi: 4           # Claude'a gösterilecek en fazla görsel
+  onceki_aciklama_sayisi: 10
+  emoji_max: 1
+  # Hedef kitle LinkedIn'de stand üreticisi / dekoratör firmalar (freelance tasarım desteği).
+  cagri: "Fuar projelerinizde 3D stand tasarımı desteğine ihtiyacınız olursa mesaj atabilirsiniz."
+  etiket_sayisi: 4
+  sabit_etiketler: ["#fuarstandı", "#standtasarımı"]
+  etiket_havuzu: ["#exhibitiondesign", "#standdesign", "#3dtasarım", "#fuar", "#exhibitionstand"]
+  proje_etiket_onerileri: ["#ahşapstand", "#modülerstand", "#maximastand"]
+  # Üretim konusu hiç geçmez: ne inkar ne vaat. Herkese açık olmaması gereken ek yasaklı
+  # kelimeler GIZLI_YASAKLI gizli değerinden (virgülle ayrılmış) okunur, buraya yazılmaz.
+  yasakli_ifadeler: ["üretim", "üretiyoruz", "montaj", "kurulum", "anahtar teslim", "imalat",
+                     "sadece tasarım", "yalnızca tasarım", "sadece 3d", "yalnızca 3d",
+                     "dm'den"]
+
+yayinci:
+  tur: buffer
+
+bildirim:
+  eposta: true
+  whatsapp: false

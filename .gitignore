@@ -1,0 +1,24 @@
+# Gizli anahtarlar: ASLA yüklenmez
+.env
+.env.*
+!.env.ornek
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Sistem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Yerel deneme çıktıları
+linkedin-otomasyon/deneme_cikti/
+
+# Sadece bu bilgisayarda: yükleme yardımcıları ve iç talimat dosyası
+_yerel/
+/linkedin-otomasyon.md
