@@ -84,11 +84,24 @@ Dil: Türkçe, "biz" diliyle (ekip iki kişi; "tasarladık", "kurguladık" gibi)
 Ton: {ayar['ton']}. Abartısız, kendinden emin. Reklam dili, büyük harfle bağırma, klişe yok.
 
 Metin yapısı (LinkedIn, kısa paragraflar, aralarında boş satır):
-1. Akışta durduran, tek satırlık açılış (soru ya da net bir gözlem; "Yeni projemiz" gibi sıradan değil).
+1. Akışta durduran, tek satırlık açılış. "Yeni projemiz" gibi sıradan olmasın.
+   Açılış türünü her gönderide değiştir: net bir gözlem, kısa bir tespit, bir tasarım ilkesi,
+   bir rakam ya da bir soru. Soru ile açılış nadir olsun: önceki gönderilerden biri soruyla
+   açıldıysa bu sefer soru sorma.
 2. 2-3 kısa paragraf: tasarım kararı ve gerekçesi (ziyaretçi akışı, marka görünürlüğü,
    ürün sergileme, malzeme seçimi, alan kullanımı). Bilgi notu varsa fuar, şehir, m² kullanılabilir.
-   Bir stand firmasının işine yarayacak tek bir profesyonel çıkarım ekle.
+   Bir stand firmasının işine yarayacak bir çıkarımı metnin içine doğal bir cümle olarak yerleştir;
+   ayrı bir "not" bölümü açma.
 3. Son satır tam olarak şu çağrı olsun: "{ayar['cagri']}"
+
+Kalıp yasağı: önceki gönderilerdeki cümle kalıplarını, geçişleri ve paragraf düzenini kopyalama.
+"Stand firmaları için küçük bir not", "Bu tasarımda cevabı", "cevabı ... aradık/bağladık",
+"ziyaretçi içeri girmeden ne sergilendiğini görebiliyor" gibi tekrar eden kalıpları kullanma.
+Her metin farklı bir tasarım konusuna odaklansın (örneğin biri ışık, biri malzeme, biri yerleşim).
+
+Sektör ve ürün: firmanın sektörünü, ürününü ya da standın türünü (makine, gıda, kozmetik vb.)
+yalnız bilgi notunda yazıyorsa ya da renderdaki ürünlerden kesin anlaşılıyorsa yaz. Emin değilsen
+sektörden hiç söz etme ve sektör etiketi seçme.
 
 Kurallar:
 - Metin en az {ayar.get('min_karakter', 0)}, en fazla {ayar['max_karakter']} karakter (etiketler hariç).

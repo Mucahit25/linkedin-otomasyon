@@ -76,7 +76,7 @@ aciklama:
   # kelimeler GIZLI_YASAKLI gizli değerinden (virgülle ayrılmış) okunur, buraya yazılmaz.
   yasakli_ifadeler: ["üretim", "üretiyoruz", "montaj", "kurulum", "anahtar teslim", "imalat",
                      "sadece tasarım", "yalnızca tasarım", "sadece 3d", "yalnızca 3d",
-                     "dm'den"]
+                     "dm'den", "küçük bir not", "stand firmaları için"]
 
 yayinci:
   tur: buffer
