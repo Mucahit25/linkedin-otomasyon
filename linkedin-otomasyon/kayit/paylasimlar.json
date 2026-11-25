@@ -134,7 +134,7 @@
           "hash": "4b8e634514ed791bb2ca8d2072e8864f6732502b5d991dcf7609bed1d55ebaf2"
         }
       ],
-      "durum": "taslak",
+      "durum": "paylasildi",
       "buffer_post_id": "6b054409f1f04351232e3c5f",
       "planlanan": "2026-12-01T08:37:00+03:00",
       "olusturma": "2026-11-24T07:59:44.673618+00:00",
@@ -146,7 +146,32 @@
         "#3dtasarım"
       ],
       "metin": "Köşe standın iki cephesi aynı anda okunmak zorunda.\n\nBeyaz üst kütlede marka yazısını iki yüzeye de yerleştirdik. Koridorun hangi yanından yaklaşılırsa yaklaşılsın ad karşıya çıkıyor, kütlenin kenarındaki ince ışık hattı da silueti uzaktan çiziyor.\n\nAlt katta gri taş desenli iki kolon girişi ölçülendiriyor. Önde duran siyah-beyaz tezgâh akışı yönlendiriyor, arkada açık raflar ve oturma grubu görünür kalıyor. Siyah çerçeveli cam yüzeyler cepheyi dikey bölüyor, köşelerdeki bitkiler sert hatları yumuşatıyor.\n\nKöşe projelerinde iki cepheyi baştan birlikte sunmak, müşterinin \"diğer taraftan nasıl görünüyor\" sorusunu toplantıdan önce kapatıyor. 🔍\n\nFuar projelerinizde 3D stand tasarımı desteğine ihtiyacınız olursa mesaj atabilirsiniz.\n\n#fuarstandı #standtasarımı #standdesign #3dtasarım",
-      "hazir": "hazir/99d39bb738b07634"
+      "hazir": "hazir/99d39bb738b07634",
+      "paylasilma": "2026-11-24T20:30:00+00:00"
+    },
+    {
+      "proje_id": "04728be32aea911b",
+      "ad": "BFF_Kozmetik_r1_fuar_temiz.jpg",
+      "tur": "tekli",
+      "gorseller": [
+        {
+          "ad": "BFF_Kozmetik_r1_fuar_temiz.jpg",
+          "hash": "bfd9f883ba44e122c66c40d2d2213e5dfa4a462f7e68c45a2c51fdf96b779511"
+        }
+      ],
+      "durum": "gonderiliyor",
+      "buffer_post_id": null,
+      "planlanan": "2026-12-01T08:58:00+03:00",
+      "olusturma": "2026-11-25T08:02:47.616346+00:00",
+      "aciklama": "Cephenin üstüne yatay bir ritim koyunca stand uzaktan tek parça okunuyor.\n\nBu projede üst bandı dikey ahşap çıtalarla kurguladık. Çıtaların arasındaki ışık çizgileri bandı hafifletiyor, koridorun iki yanından bakan biri de standın tam genişliğini tek bakışta algılıyor. Bandın altına sıralanan asma yeşillikler, beyaz cepheyi yumuşatıyor.\n\nAlt katmanda sade kalmaya çalıştık. Solda alçak bir karşılama tezgâhı, ortada ışıklı raflara açılan geniş bir giriş, sağda siyah çerçeveli gridli bir yüzey var. Zemindeki açık ahşap, üst banttaki tonla eşleşip iki seviyeyi birbirine bağlıyor.\n\nCephenin tamamını tek bir malzeme ve ışık diliyle çözmek, render sunumunda müşterinin \"bütün bunlar birbirine nasıl bağlanıyor\" sorusuna ek açıklama gerektirmiyor.\n\nFuar projelerinizde 3D stand tasarımı desteğine ihtiyacınız olursa mesaj atabilirsiniz.",
+      "etiketler": [
+        "#fuarstandı",
+        "#standtasarımı",
+        "#fuartasarımı",
+        "#fuar"
+      ],
+      "metin": "Cephenin üstüne yatay bir ritim koyunca stand uzaktan tek parça okunuyor.\n\nBu projede üst bandı dikey ahşap çıtalarla kurguladık. Çıtaların arasındaki ışık çizgileri bandı hafifletiyor, koridorun iki yanından bakan biri de standın tam genişliğini tek bakışta algılıyor. Bandın altına sıralanan asma yeşillikler, beyaz cepheyi yumuşatıyor.\n\nAlt katmanda sade kalmaya çalıştık. Solda alçak bir karşılama tezgâhı, ortada ışıklı raflara açılan geniş bir giriş, sağda siyah çerçeveli gridli bir yüzey var. Zemindeki açık ahşap, üst banttaki tonla eşleşip iki seviyeyi birbirine bağlıyor.\n\nCephenin tamamını tek bir malzeme ve ışık diliyle çözmek, render sunumunda müşterinin \"bütün bunlar birbirine nasıl bağlanıyor\" sorusuna ek açıklama gerektirmiyor.\n\nFuar projelerinizde 3D stand tasarımı desteğine ihtiyacınız olursa mesaj atabilirsiniz.\n\n#fuarstandı #standtasarımı #fuartasarımı #fuar",
+      "hazir": "hazir/04728be32aea911b"
     }
   ],
   "gonderilen_uyarilar": []
